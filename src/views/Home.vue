@@ -1,14 +1,27 @@
 <template>
   <div>
     <b-container>
-      <b-row id="row-1"><b-col cols="12"></b-col></b-row>
-      <b-row id="row-2"><b-col cols="12"></b-col></b-row>
-      <b-row id="row-3">
+      <b-row id="row-1" align-v="start"><b-col cols="12"></b-col></b-row>
+      <b-row id="row-2" align-v="center"><b-col cols="12"></b-col></b-row>
+      <b-row id="row-3" align-v="end">
         <b-col cols="9"></b-col>
         <b-col cols="3">
-          <b-row v-for="row in arr" :key="row[1]">
+          <b-row v-show="showButton" v-for="row in arr" :key="row[1]">
             <b-col cols="6" v-for="item in row" :key="item"><Button :buttonName="item"/></b-col>
           </b-row>
+        </b-col>
+      </b-row>
+      <b-row>
+        <b-col cols="11"></b-col>
+        <b-col cols="1">
+          <b-iconstack font-scale="2" v-if="!showButton" @click="clickButton">
+            <b-icon icon="circle-fill" variant="info"></b-icon>
+            <b-icon icon="plus-circle" variant="dark"></b-icon>
+          </b-iconstack>
+          <b-iconstack v-else @click="clickButton" font-scale="2">
+            <b-icon icon="circle-fill" variant="dark"></b-icon>
+            <b-icon icon="x-circle" variant="info"></b-icon
+          ></b-iconstack>
         </b-col>
       </b-row>
     </b-container>
@@ -25,24 +38,34 @@ export default {
         ["three", "four"],
         ["five", "six"],
         ["seven", "eight"]
-      ]
+      ],
+      showButton: false
     };
   },
   components: {
     Button
+  },
+  methods: {
+    clickButton() {
+      this.showButton = !this.showButton;
+    }
   }
 };
 </script>
 <style scoped>
 #row-1 {
-  height: 30%;
+  height: 16em;
   width: 100%;
+  border: 1px dashed red;
 }
 #row-2 {
-  height: 30%;
+  height: 15em;
   width: 100%;
+  border: 1px dashed green;
 }
 #row-3 {
-  height: 30%;
+  height: 14em;
+  width: 100%;
+  border: 1px dashed blue;
 }
 </style>
