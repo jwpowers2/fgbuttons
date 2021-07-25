@@ -1,18 +1,20 @@
 <template>
   <div>
-    <b-button size="lg" class="b-color m-2">{{ buttonName }}</b-button>
+    <b-button size="md" class="b-color m-2" rounder="lg" variant="light" shadow="true"
+      ><b-icon :icon="iconName" font-scale="1"></b-icon>{{ buttonName }}</b-button
+    >
   </div>
 </template>
 <script>
 export default {
   name: "Button",
-  props: { buttonName: String }
+  props: { buttonName: String, iconName: String }
 };
 </script>
 <style scoped>
 .b-color {
-  color: white;
   font-size: 15px;
   width: 100%;
+  box-shadow: -2px 2px #d6d6d6;
 }
 </style>
