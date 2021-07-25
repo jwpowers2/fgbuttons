@@ -45,12 +45,16 @@ export default {
           { icon: "geo-alt-fill", title: "Check out" }
         ],
         [
-          { icon: "", title: "one" },
-          { icon: "", title: "two" }
+          { icon: "flower2", title: "New medication" },
+          { icon: "heart-fill", title: "New treatment plan" }
         ],
         [
-          { icon: "", title: "one" },
-          { icon: "", title: "two" }
+          { icon: "info-square-fill", title: "New incident" },
+          { icon: "calendar-plus", title: "New calendar event" }
+        ],
+        [
+          { icon: "calendar-event-fill", title: "New progress note" },
+          { icon: "calendar-fill", title: "New group note" }
         ]
       ],
       showButton: false
