@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-container fluid>
+    <b-container fluid no-gutters="true">
       <b-row no-gutters="true" id="row-1" align-v="start"><b-col cols="12"></b-col></b-row>
       <b-row no-gutters="true" id="row-2" align-v="center"><b-col cols="12"></b-col></b-row>
       <b-row no-gutters="true" id="row-3" align-v="end">
@@ -93,5 +93,9 @@ export default {
 #button-column {
   text-align: right;
   border: 1px dashed orange;
+}
+.container-fluid {
+  margin-right: 0 !important;
+  padding-right: 0 !important;
 }
 </style>
