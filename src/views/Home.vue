@@ -74,17 +74,14 @@ export default {
 #row-1 {
   height: 16em;
   width: 100%;
-  border: 1px dashed red;
 }
 #row-2 {
   height: 15em;
   width: 100%;
-  border: 1px dashed green;
 }
 #row-3 {
   height: 15em;
   width: 100%;
-  border: 1px dashed blue;
 }
 #row-4 {
   height: 2em;
@@ -92,7 +89,6 @@ export default {
 }
 #button-column {
   text-align: right;
-  border: 1px dashed orange;
 }
 .container-fluid {
   margin-right: 0 !important;
