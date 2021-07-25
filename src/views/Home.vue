@@ -7,8 +7,8 @@
         <b-col cols="9"></b-col>
         <b-col cols="3">
           <b-row v-show="showButton" v-for="row in arr" :key="row[1]">
-            <b-col cols="6" v-for="item in row" :key="item"
-              ><Button :iconName="item.icon" :buttonName="item.title"
+            <b-col cols="6" v-for="item in row" :key="item" class="p-1"
+              ><Button :iconName="item.icon" :buttonName="item.title" :variant="item.variant"
             /></b-col>
           </b-row>
         </b-col>
@@ -37,24 +37,24 @@ export default {
     return {
       arr: [
         [
-          { icon: "person-plus-fill", title: "New intake" },
-          { icon: "person-dash-fill", title: "Discharge" }
+          { icon: "person-plus-fill", title: "New intake", variant: "info" },
+          { icon: "person-dash-fill", title: "Discharge", variant: "danger" }
         ],
         [
-          { icon: "geo-alt-fill", title: "Check in" },
-          { icon: "geo-alt-fill", title: "Check out" }
+          { icon: "geo-alt-fill", title: "Check in", variant: "secondary" },
+          { icon: "geo-alt-fill", title: "Check out", variant: "primary" }
         ],
         [
-          { icon: "flower2", title: "New medication" },
-          { icon: "heart-fill", title: "New treatment plan" }
+          { icon: "flower2", title: "New medication", variant: "primary" },
+          { icon: "heart-fill", title: "New treatment plan", variant: "warning" }
         ],
         [
-          { icon: "info-square-fill", title: "New incident" },
-          { icon: "calendar-plus", title: "New calendar event" }
+          { icon: "info-square-fill", title: "New incident", variant: "danger" },
+          { icon: "calendar-plus", title: "New calendar event", variant: "info" }
         ],
         [
-          { icon: "calendar-event-fill", title: "New progress note" },
-          { icon: "calendar-fill", title: "New group note" }
+          { icon: "calendar-event-fill", title: "New progress note", variant: "primary" },
+          { icon: "calendar-fill", title: "New group note", variant: "secondary" }
         ]
       ],
       showButton: false
