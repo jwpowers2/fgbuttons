@@ -1,5 +1,7 @@
 #Run frontend app using Docker
 
+### note: for most anything docker you have to have sudoer/superuser permissions
+
 ###firstly, navidate to the root of this project, (same directory as the Dockerfile)
 ###Now, build docker image, tagging it as 'frontend'.
 
@@ -23,3 +25,11 @@ fyi: My terminal got stuck running the docker container and I had to close the t
 `curl http://localhost:8080`
 
 #### if there is a problem, first check if you already have something running on 8080
+
+## testing within the docker container
+
+1. get PID for container `docker ps`
+
+2. start bash shell in the container: `docker exec -it <PID> bash`
+
+3. navigate to target directory and run `npm run test:unit`
