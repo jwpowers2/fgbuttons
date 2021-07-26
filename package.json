@@ -9,6 +9,8 @@
     "test:unit": "nyc vue-cli-service test:unit"
   },
   "dependencies": {
+    "bootstrap": "^5.0.2",
+    "bootstrap-vue": "^2.21.2",
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0"
@@ -42,7 +44,10 @@
     "rules": {
       "comma-dangle": "off",
       "quotes": "off",
-      "eol-last": "off"
+      "eol-last": "off",
+      "spaced-comment": "off",
+      "arrow-parens": "off",
+      "no-multiple-empty-lines": "off"
     },
     "overrides": [
       {
